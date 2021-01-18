@@ -1,5 +1,6 @@
-#IDE files
-./idea
-./*.iml
+.idea
+.vscode
+vendor
+node_modules
+*.iml
 
-./vendor

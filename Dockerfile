@@ -1,4 +1,4 @@
-FROM php:8.0-apache-buster
+FROM php:8.1.4-apache-buster
 
 COPY . /var/www/html
 
@@ -13,10 +13,10 @@ COPY docker/vhost-configs/vhost.local.conf /etc/apache2/sites-enabled/
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 
 # INSTALL COMPOSER
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.0.8
-
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN composer install
 # INSTALL xdebug
-RUN pecl install xdebug-3.0.0
+RUN pecl install xdebug-3.1.3
 RUN docker-php-ext-enable xdebug
 RUN echo "xdebug.mode=debug" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN echo "xdebug.client_host = host.docker.internal" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

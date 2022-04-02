@@ -1,9 +1,9 @@
 <?php
 
-use src\application\controller\ArticleViewController;
-use src\framework\request\ControllerResolver;
+use src\main\application\controller\ArticleViewController;
+use src\main\framework\request\ControllerResolver;
 
-require_once '../vendor/autoload.php';
+require_once '../build/vendor/autoload.php';
 
 const __PUBLIC__ = __DIR__;
 const __CONFIG__ = __DIR__ . "/../src/application/config";

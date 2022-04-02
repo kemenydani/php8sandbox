@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="vendor/autoload.php" executionOrder="depends,defects" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" verbose="true">
-  <coverage processUncoveredFiles="true">
-    <include>
-      <directory suffix=".php">src</directory>
-    </include>
-  </coverage>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="build/vendor/autoload.php" executionOrder="depends,defects" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" verbose="true">
+  <logging>
+    <testdoxText outputFile="php://stdout"/>
+  </logging>
   <php>
     <ini name="error_reporting" value="1" />
+    <ini name="memory_limit" value="1024M" />
     <server name="HTTP_HOST" value="www.application.test"/>
     <server name="SERVER_NAME" value="www.application.test"/>
     <server name="SERVER_ADDR" value="123.45.6.7"/>
@@ -17,7 +16,16 @@
   </php>
   <testsuites>
     <testsuite name="default">
-      <directory suffix="Test.php">src</directory>
+      <directory suffix=".php">src/main</directory>
     </testsuite>
   </testsuites>
+  <coverage cacheDirectory="build/coverage/cache" processUncoveredFiles="true" pathCoverage="true" ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
+    <include>
+      <directory suffix=".php">src/main</directory>
+    </include>
+    <report>
+      <clover outputFile="./build/coverage/clover.xml"/>
+      <html outputDirectory="./build/coverage/html-coverage"/>
+    </report>
+  </coverage>
 </phpunit>

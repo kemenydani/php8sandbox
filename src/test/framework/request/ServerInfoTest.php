@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace src\framework\request;
+namespace src\test\framework\request;
 
 use PHPUnit\Framework\TestCase;
+use src\main\framework\request\ServerInfo;
 
 class ServerInfoTest extends TestCase
 {

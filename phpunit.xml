@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="vendor/autoload.php" executionOrder="depends,defects" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" verbose="true">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
+  <php>
+    <ini name="error_reporting" value="1" />
+    <server name="HTTP_HOST" value="www.application.test"/>
+    <server name="SERVER_NAME" value="www.application.test"/>
+    <server name="SERVER_ADDR" value="123.45.6.7"/>
+    <server name="REMOTE_ADDR" value="123.45.6.7"/>
+    <server name="SERVER_PORT" value="8910"/>
+    <server name="REQUEST_URI" value=""/>
+    <server name="HTTP_USER_AGENT" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"/>
+  </php>
+  <testsuites>
+    <testsuite name="default">
+      <directory suffix="Test.php">src</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

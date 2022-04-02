@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace src\main\framework\config\attribute;
+namespace framework\config\attribute;
 
 use Attribute;
-use src\main\framework\request\attribute\ControllerConstructorAttribute;
+use framework\request\attribute\ControllerConstructorAttribute;
 
 #[Attribute(Attribute::TARGET_PROPERTY)]
 final class ConfigValue implements ControllerConstructorAttribute {

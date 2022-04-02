@@ -1,16 +1,16 @@
 <?php
 
-namespace src\main\framework\request;
+namespace framework\request;
 
 use ReflectionClass;
 use ReflectionObject;
 use ReflectionParameter;
-use src\application\controller\Controller;
-use src\main\framework\config\attribute\ConfigValue;
-use src\main\framework\request\attribute\ControllerConstructorAttribute;
-use src\main\framework\request\attribute\Dependency;
-use src\main\framework\request\attribute\PathParam;
-use src\main\framework\request\attribute\QueryParam;
+use application\controller\Controller;
+use framework\config\attribute\ConfigValue;
+use framework\request\attribute\ControllerConstructorAttribute;
+use framework\request\attribute\Dependency;
+use framework\request\attribute\PathParam;
+use framework\request\attribute\QueryParam;
 
 final class ControllerInstanceCreator {
     private ReflectionClass $reflectionClass;

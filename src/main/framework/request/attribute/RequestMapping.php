@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace src\main\framework\request\attribute;
+namespace framework\request\attribute;
 
 use Attribute;
 

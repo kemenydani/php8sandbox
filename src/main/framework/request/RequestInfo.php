@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace src\main\framework\request;
+namespace framework\request;
 
 final class RequestInfo {
     private static ?RequestInfo $instance = null;

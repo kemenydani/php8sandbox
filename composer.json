@@ -8,7 +8,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "src\\": "src/"
+      "src\\": "src/",
+      "application\\": "src/main/application",
+      "framework\\": "src/main/framework",
+      "test\\": "src/test"
     }
   },
   "require-dev": {
@@ -16,5 +19,8 @@
   },
   "config": {
     "vendor-dir": "build/vendor"
+  },
+  "scripts": {
+    "test": "phpunit"
   }
 }

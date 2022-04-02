@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="build/vendor/autoload.php" executionOrder="depends,defects" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" verbose="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd" bootstrap="build/vendor/autoload.php" executionOrder="depends,defects" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" colors="true" verbose="true">
   <logging>
     <testdoxText outputFile="php://stdout"/>
   </logging>
@@ -12,16 +12,17 @@
     <server name="REMOTE_ADDR" value="123.45.6.7"/>
     <server name="SERVER_PORT" value="8910"/>
     <server name="REQUEST_URI" value=""/>
+    <server name="REQUEST_METHOD" value="GET"/>
     <server name="HTTP_USER_AGENT" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36"/>
   </php>
   <testsuites>
     <testsuite name="default">
-      <directory suffix=".php">src/main</directory>
+      <directory suffix=".php">src/test</directory>
     </testsuite>
   </testsuites>
   <coverage cacheDirectory="build/coverage/cache" processUncoveredFiles="true" pathCoverage="true" ignoreDeprecatedCodeUnits="true" disableCodeCoverageIgnore="true">
     <include>
-      <directory suffix=".php">src/main</directory>
+      <directory suffix=".php">src/main/</directory>
     </include>
     <report>
       <clover outputFile="./build/coverage/clover.xml"/>

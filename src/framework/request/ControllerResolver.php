@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace src\lib\request;
+namespace src\framework\request;
 
 use ReflectionClass;
-use src\controller\Controller;
-use src\lib\request\attribute\RequestMapping;
+use src\application\controller\Controller;
+use src\framework\request\attribute\RequestMapping;
 
 final class ControllerResolver {
     private RequestMapper $requestMapper;

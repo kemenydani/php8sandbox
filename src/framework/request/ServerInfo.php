@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace src\lib\request;
+namespace src\framework\request;
 
 final class ServerInfo {
     private static ?ServerInfo $instance = null;

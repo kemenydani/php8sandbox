@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace src\lib\request\attribute;
+namespace src\framework\request\attribute;
 
 use Attribute;
-use src\lib\request\RequestMapper;
+use src\framework\request\RequestMapper;
 
 #[Attribute(Attribute::TARGET_PARAMETER)]
 final class PathParam implements ControllerConstructorAttribute {

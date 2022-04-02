@@ -1,9 +1,6 @@
 <?php
 
-
-namespace src\controller;
-
-use src\lib\request\RequestInfo;
+namespace src\application\controller;
 
 interface Controller {
     public function __invoke(): void;

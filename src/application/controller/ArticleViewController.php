@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace src\controller;
+namespace src\application\controller;
 
-use src\lib\config\attribute\ConfigValue;
-use src\lib\request\attribute\Dependency;
-use src\lib\request\attribute\PathParam;
-use src\lib\request\attribute\QueryParam;
-use src\lib\request\attribute\RequestMapping;
-use src\lib\request\RequestInfo;
-use src\lib\request\RequestMethod;
-use src\lib\request\ServerInfo;
+use src\framework\config\attribute\ConfigValue;
+use src\framework\request\attribute\Dependency;
+use src\framework\request\attribute\PathParam;
+use src\framework\request\attribute\QueryParam;
+use src\framework\request\attribute\RequestMapping;
+use src\framework\request\RequestInfo;
+use src\framework\request\RequestMethod;
+use src\framework\request\ServerInfo;
 
 #[RequestMapping(RequestMethod::GET, ["/article/view/{year}/{title}", "/blog/view/{year}/{title}"])]
 final class ArticleViewController implements Controller {

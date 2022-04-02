@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace src\lib\request\attribute;
+namespace src\framework\request\attribute;
 
 use Attribute;
-use src\lib\request\RequestInfo;
-use src\lib\request\ServerInfo;
+use src\framework\request\RequestInfo;
+use src\framework\request\ServerInfo;
 
 #[Attribute(Attribute::TARGET_PARAMETER)]
 final class Dependency implements ControllerConstructorAttribute {

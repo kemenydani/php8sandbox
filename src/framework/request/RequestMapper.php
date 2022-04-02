@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace src\lib\request;
+namespace src\framework\request;
 
-use src\lib\request\attribute\RequestMapping;
+use src\framework\request\attribute\RequestMapping;
 
 final class RequestMapper {
     private const PATTERN_PATH_PLACEHOLDER = "#\{(.*?)\}#";

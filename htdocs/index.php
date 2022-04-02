@@ -1,7 +1,7 @@
 <?php
 
-use src\controller\ArticleViewController;
-use src\lib\request\ControllerResolver;
+use src\application\controller\ArticleViewController;
+use src\framework\request\ControllerResolver;
 
 require_once '../vendor/autoload.php';
 
